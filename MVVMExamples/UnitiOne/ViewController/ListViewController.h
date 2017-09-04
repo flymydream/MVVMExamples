@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  ListViewController.h
 //  MVVMDemo
 //
 //  Created by hero on 2017/9/2.
@@ -8,10 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
-
+@interface ListViewController : UITableViewController
 
 @end
-

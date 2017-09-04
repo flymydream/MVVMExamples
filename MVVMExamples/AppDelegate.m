@@ -1,13 +1,13 @@
 //
 //  AppDelegate.m
-//  MVVMExamples
+//  MVVMDemo
 //
-//  Created by hero on 2017/9/4.
+//  Created by hero on 2017/9/2.
 //  Copyright © 2017年 hero. All rights reserved.
 //
 
 #import "AppDelegate.h"
-
+#import "ListViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -17,6 +17,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    ListViewController *list  = [[ListViewController alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:list];
+    self.window.rootViewController = nav;
     return YES;
 }
 
